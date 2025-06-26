@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 const SKILL_LEVELS = ["Beginner", "Intermediate", "Expert"];
 
 export default function FancySkillSlider({ skill, setSkill }) {
