@@ -14,7 +14,7 @@ function App() {
     setError(null);
 
     try {
-      const response = await fetch("https://quotecraft-1.onrender.com/predict", {
+      const response = await fetch("/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ description, skill }),
