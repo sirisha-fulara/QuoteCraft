@@ -9,8 +9,12 @@ import os
 app = Flask(__name__, static_folder="../frontend/build", static_url_path="/")
 CORS(app)
 
-model = joblib.load("../models/model.pkl")
-vectorizer = joblib.load("../models/vectorizer.pkl")
+base_dir = os.path.dirname(__file__)
+model_path = os.path.join(base_dir, '..', 'models', 'model.pkl')
+vectorizer_path = os.path.join(base_dir, '..', 'models', 'vectorizer.pkl')
+
+model = joblib.load(model_path)
+vectorizer = joblib.load(vectorizer_path)
 
 skill_map = {"Beginner": 0, "Intermediate": 1, "Expert": 2}
 
