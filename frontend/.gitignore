@@ -1,0 +1,6 @@
+# Ignore only unnecessary things
+__pycache__/
+.env
+*.pyc
+*.pkl
+node_modules
