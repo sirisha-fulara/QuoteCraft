@@ -23,9 +23,9 @@ def clean_text(text):
     text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
     return text.strip()
 
-@app.route('/', methods=['GET', 'POST'])
-def home():
-    return render_template("index.html")
+#@app.route('/', methods=['GET', 'POST'])
+#def home():
+#    return render_template("index.html")
 
 @app.route('/predict', methods=['POST'])
 def predict():
